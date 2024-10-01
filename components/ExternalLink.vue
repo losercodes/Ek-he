@@ -1,6 +1,6 @@
 <template>
   <li>
-    <nuxt-link :to="url" target="_blank" v-if="label && url">
+    <nuxt-link :to="url" target="_blank" v-if="label && url" v-tooltip="tooltipText">
       <dt
         class="flex items-center space-x-2 p-1 -m-1 rounded-xl hover:bg-slate-100 bg-slate-50"
       >
@@ -19,6 +19,7 @@
     </nuxt-link>
   </li>
 </template>
+
 <script setup>
 const props = defineProps({
   label: {
@@ -34,4 +35,11 @@ const props = defineProps({
     default: "ph:link-simple",
   },
 });
+
+// Tooltip text for better UX
+const tooltipText = `Open ${props.label}`;
 </script>
+
+<style scoped>
+/* Optional: add any styles for the tooltip or hover effects */
+</style>
