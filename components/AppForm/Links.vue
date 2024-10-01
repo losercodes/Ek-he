@@ -127,7 +127,7 @@ const removeLink = (link) => {
   background: #c8ebfb;
 }
 .list-group {
-  min-height: 20px;
+  min-height: 30px;
 }
 .list-group-item {
   cursor: move;
